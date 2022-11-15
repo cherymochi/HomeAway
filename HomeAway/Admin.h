@@ -9,9 +9,9 @@ using namespace std;
 
 
 class Admin {
-private:
-	string adminUser;
-	string adminPass;
+protected:
+	string admin_user;
+	string admin_pass;
 
 public:
 	Admin(string user, string pass) { // Primary Constructor
@@ -23,21 +23,6 @@ public:
 		cout << "Admin Destructor was called." << endl;
 	}
 
-	// Mutators
-	void setAdminUser(string user) {
-		adminUser = user;
-	}
-	void setAdminPass(string pass) {
-		adminPass = pass;
-	}
-
-	// Accessors
-	string getAdminUser() {
-		return adminUser;
-	}
-	string getAdminPass() {
-		return adminPass;
-	}
 };
 
 #endif // __ADMIN_H__

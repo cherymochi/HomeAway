@@ -132,7 +132,9 @@
   <ItemGroup>
     <ClInclude Include="Admin.h" />
     <ClInclude Include="DateEmployed.h" />
+    <ClInclude Include="DateEnrolled.h" />
     <ClInclude Include="Staff.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

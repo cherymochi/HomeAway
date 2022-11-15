@@ -9,19 +9,19 @@ using namespace std;
 
 
 class DateEmployed {
-private:
-	int staffDay;
-	int staffMonth;
-	int staffYear;
+protected:
+	int staff_day;
+	int staff_month;
+	int staff_year;
 
 public:
 	DateEmployed(int d, int m, int y) { // Primary Constructor
-		staffDay = d;
-		staffMonth = m;
-		staffYear = y;
+		staff_day = d;
+		staff_month = m;
+		staff_year = y;
 	}
 	void displayEmployDate() {
-		cout << staffDay << "/" << staffMonth << "/" << staffYear << endl;
+		cout << staff_day << "/" << staff_month << "/" << staff_year << endl;
 	}
 };
 

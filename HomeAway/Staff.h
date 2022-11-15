@@ -12,21 +12,21 @@ using namespace std;
 
 class Staff {
 private:
-	string staffId;
+	string staff_id;
 	string faculty;
 	DateEmployed DE;
 	string department;
-	string staffLastName;
-	string staffFirstName;
+	string staff_last_name;
+	string staff_first_name;
 
 	
 public:
 	Staff(string id, string fName, string lName, string fac, string dep, int d, int m, int y): DE(d, m, y) { // Primary Constructor
-		staffId = id;
+		staff_id= id;
 		faculty = fac;
 		department = dep;
-		staffLastName = lName;
-		staffFirstName = fName;
+		staff_last_name= lName;
+		staff_first_name= fName;
 	}
 
 	~Staff() { // Destructor
@@ -35,7 +35,7 @@ public:
 
 	// Mutators
 	void setStaffId(string id) {
-		staffId = id;
+		staff_id= id;
 	}
 	void setFaculty(string fac) {
 		faculty = fac;
@@ -44,15 +44,15 @@ public:
 		department = dep;
 	}
 	void setStaffLastName(string lName) {
-		staffLastName = lName;
+		staff_last_name= lName;
 	}
 	void setStaffFirstName(string fName) {
-		staffFirstName = fName;
+		staff_first_name= fName;
 	}
 
 	// Accessors
 	string getStaffId() {
-		return staffId;
+		return staff_id;
 	}
 	string getFaculty() {
 		return faculty;
@@ -61,10 +61,10 @@ public:
 		return department;
 	}
 	string getStaffLastName() {
-		return staffLastName;
+		return staff_last_name;
 	}
 	string getStaffFirstName() {
-		return staffFirstName;
+		return staff_first_name;
 	}
 
 	// Other
