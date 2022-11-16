@@ -3,22 +3,25 @@
 #ifndef __STUDENT_H__
 #define __STUDENT_H__
 
+#include "DateEnrolled.h"
+
 #include <iostream>
 
 using namespace std;
 
 class Student {
 private:
-	string stud_id;
 	string status;
+	string stud_id;
 	string address;
 	string pro_code;
+	DateEnrolled de;
 	string contact_num;
 	string stud_last_name;
 	string stud_first_name;
 
 public:
-	Student(string id, string stat, string add, string code, string phone, string fName, string lName) { // Primary Constructor
+	Student(string id, string stat, string add, string code, string phone, string fName, string lName, int d, int m, int y): de(d, m, y) { // Primary Constructor
 		stud_id = id;
 		status = stat;
 		address = add;
@@ -27,7 +30,7 @@ public:
 		stud_last_name = lName;
 		stud_first_name = fName;
 	}
-	~Student() {
+	~Student() { // Destructor
 		cout << "Student Destructor was called." << endl;
 	}
 	

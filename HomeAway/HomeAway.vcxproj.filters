@@ -35,5 +35,11 @@
     <ClInclude Include="DateEnrolled.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Programme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Course.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

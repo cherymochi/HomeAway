@@ -15,8 +15,8 @@ protected:
 
 public:
 	Admin(string user, string pass) { // Primary Constructor
-		adminUser = user;
-		adminPass = pass;
+		admin_user = user;
+		admin_pass = pass;
 	}
 
 	~Admin() { // Destructor
