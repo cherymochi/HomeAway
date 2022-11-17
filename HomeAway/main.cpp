@@ -69,7 +69,7 @@ int main() {
 					case 1:
 					{
 						system("cls");
-						staff.createStaffUser();
+						staff.createStaff();
 
 					}break;
 					case 0:
