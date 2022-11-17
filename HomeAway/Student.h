@@ -5,6 +5,9 @@
 
 #include "DateEnrolled.h"
 
+#include <string>
+#include <fstream>
+#include <conio.h>
 #include <iostream>
 
 using namespace std;
@@ -21,6 +24,15 @@ private:
 	string stud_first_name;
 
 public:
+	Student() { // Default Constructor
+		status = "NULL";
+		stud_id = "NULL";
+		address = "NULL";
+		pro_code = "NULL";
+		contact_num = "NULL";
+		stud_last_name = "NULL";
+		stud_first_name = "NULL";
+	}
 	Student(string id, string stat, string add, string code, string phone, string fName, string lName, int d, int m, int y): de(d, m, y) { // Primary Constructor
 		stud_id = id;
 		status = stat;

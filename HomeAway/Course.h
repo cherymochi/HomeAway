@@ -3,6 +3,9 @@
 #ifndef __COURSE_H__
 #define __COURSE_H__
 
+#include <string>
+#include <fstream>
+#include <conio.h>
 #include <iostream>
 
 using namespace std;
@@ -17,6 +20,13 @@ private:
 	string prerequisites;
 
 public:
+	Course() { // Default Constructor
+		c_code = "NULL";
+		c_name = "NULL";
+		credits = "NULL";
+		description = "NULL";
+		prerequisites = "NULL";
+	}
 	Course(string code, string name, string cred, string desc, string prereq) {
 		c_code = code;
 		c_name = name;

@@ -3,6 +3,9 @@
 #ifndef __PROGRAMME_H__
 #define __PROGRAMME_H__
 
+#include <string>
+#include <fstream>
+#include <conio.h>
 #include <iostream>
 
 using namespace std;
@@ -17,6 +20,13 @@ private:
 	string accreditation;
 	
 public:
+	Programme(){ // Default Constructor
+		award = "NULL";
+		p_code = "NULL";
+		p_name = "NULL";
+		max_course = "NULL";
+		accreditation = "NULL";
+	}
 	Programme(string awa, string code, string name, string courses, string credit) { // Primary Construct
 		award = awa;
 		p_code = code;
@@ -63,9 +73,17 @@ public:
 	}
 
 	// Other
-	void createProgramme(string awa, string code, string name, string courses, string credit) {
+	void createProgramme() {
 		// Creates a new programme to be added to the system
+
+		
 	}
+	void displayProgramme() {
+		// Displays information entered for Programme
+
+
+	}
+
 	void modifyProgramme(string awa, string code, string name, string courses, string credit) {
 		// Modifies an existing programme in the system
 	}
