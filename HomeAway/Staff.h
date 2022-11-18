@@ -101,6 +101,44 @@ public:
 		cout << "Staff User Account Successfully Created" << endl;
 	}
 
+	void stafflogin()
+	{
+		system("cls");
+		int count;
+		string AdminUsername, AdminPassword, u, p;
+		system("cls");
+		cout << "please enter the following details" << endl;
+		cout << "USERNAME :";
+		cin >> AdminUsername;
+		cout << "PASSWORD :";
+		cin >> AdminPassword;
+
+		ifstream input("staffdatabase.txt");
+		while (input >> u >> p)
+		{
+			if (u == AdminUsername && p == AdminPassword)
+
+			{
+				count = 1;
+				system("cls");
+			}
+		}
+		input.close();
+		if (count == 1)
+		{
+			cout << "\nHello " << AdminUsername << "\nLOGIN SUCESS\nWe're glad that you're here.\nThanks for logging in\n";
+			cin.get();
+			cin.get();
+			staffdisplaymenu();
+		}
+		else
+		{
+			cout << "\nLOGIN ERROR\nPlease check your username and password\n";
+			system("pause");
+			staffmenu();
+		}
+		system("pause");
+	}
 
 };
 

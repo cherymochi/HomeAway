@@ -16,6 +16,11 @@ protected:
 	int staff_year;
 
 public:
+	DateEmployed() { // Default Constructor
+		staff_day = 11;
+		staff_month = 18;
+		staff_year = 2022;
+	}
 	DateEmployed(int d, int m, int y) { // Primary Constructor
 		staff_day = d;
 		staff_month = m;

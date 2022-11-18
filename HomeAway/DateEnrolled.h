@@ -15,6 +15,11 @@ protected:
 	int stud_year;
 
 public:
+	DateEnrolled() { // Default Constructor
+		stud_day = 11;
+		stud_month = 18;
+		stud_year = 2022;
+	}
 	DateEnrolled(int d, int m, int y) { // Primary Constructor
 		stud_day = d;
 		stud_month = m;
