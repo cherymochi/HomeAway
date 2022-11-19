@@ -1,4 +1,6 @@
 // Date Enrolled Class
+// Written by Nathalea Evans (2101707)
+
 
 #ifndef __DATEENROLLED_H__
 #define __DATEENROLLED_H__

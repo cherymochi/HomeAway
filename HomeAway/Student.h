@@ -1,4 +1,6 @@
 // Student Class
+// Written by Jamel Campbell (2104604)
+
 
 #ifndef __STUDENT_H__
 #define __STUDENT_H__
@@ -92,9 +94,36 @@ public:
 		return stud_first_name;
 	}
 
-	// Other
-	void registerStudent(string id, string stat, string add, string code, string phone, string fName, string lName) {
+	// Other Methods
+	void registerStudent() {
 		// Creates a student to be added to the system.
+
+		system("cls");
+
+		cout << "===================================================== \n";
+		cout << " \t\t\t\tREGISTER STUDENT \n ";
+		cout << "===================================================== \n\n";
+
+		cout << "Please Enter First Name: ";
+		cin >> stud_first_name;
+		cout << "Please Enter Last Name: ";
+		cin >> stud_last_name;
+		cout << "Please Enter Your Address: ";
+		cin >> address;
+		cout << "Please Enter Your Program Code:";
+		cin >> pro_code;
+		cout << "Please Enter Contact Number: ";
+		cin >> contact_num;
+
+
+		ofstream f1("RegisteredStudent.txt", ios::app);
+		f1 << stud_first_name << stud_last_name << "\t" << address << "\t" << pro_code << "\t" << contact_num << "\t" << endl;
+		f1.close();
+		system("cls");
+		cout << "Student Account Successfully Created" << endl;
+	}
+	void enroll() {
+		// Allows student to select courses to enroll in
 	}
 };
 

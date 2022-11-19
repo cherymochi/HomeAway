@@ -1,4 +1,5 @@
 // Date Employed Class
+// Written by Nathalea Evans (2101707)
 
 #ifndef __DATEEMPLOYED_H__
 #define __DATEEMPLOYED_H__

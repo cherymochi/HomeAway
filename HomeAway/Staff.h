@@ -1,9 +1,10 @@
 // Staff Class
+// Written by Jamel Campbell (2104604)
+
 
 #ifndef __STAFF_H__
 #define __STAFF_H__
 
-#include "Admin.h"
 #include "DateEmployed.h"
 
 #include <string>
@@ -24,7 +25,7 @@ private:
 	string staff_last_name;
 	string staff_first_name;
 
-	
+
 public:
 	Staff() { // Default Constructor
 		staff_id = "NULL";
@@ -33,12 +34,12 @@ public:
 		staff_last_name = "NULL";
 		staff_first_name = "NULL";
 	}
-	Staff(string id, string fName, string lName, string fac, string dep, int d, int m, int y, string password, string username): staff_acc(password, username), DE(d, m, y) { // Primary Constructor
-		staff_id= id;
+	Staff(string id, string fName, string lName, string fac, string dep, int d, int m, int y, string password, string username) : staff_acc(password, username), DE(d, m, y) { // Primary Constructor
+		staff_id = id;
 		faculty = fac;
 		department = dep;
-		staff_last_name= lName;
-		staff_first_name= fName;
+		staff_last_name = lName;
+		staff_first_name = fName;
 	}
 
 	~Staff() { // Destructor
@@ -47,7 +48,7 @@ public:
 
 	// Mutators
 	void setStaffId(string id) {
-		staff_id= id;
+		staff_id = id;
 	}
 	void setFaculty(string fac) {
 		faculty = fac;
@@ -56,10 +57,10 @@ public:
 		department = dep;
 	}
 	void setStaffLastName(string lName) {
-		staff_last_name= lName;
+		staff_last_name = lName;
 	}
 	void setStaffFirstName(string fName) {
-		staff_first_name= fName;
+		staff_first_name = fName;
 	}
 
 	// Accessors
@@ -80,8 +81,14 @@ public:
 	}
 
 	// Other
-	void createStaff(string id, string fac, string dep, string lName, string fName) { 
+	void createStaff() {
 		// Creates and adds a staff member to the system
+
+		system("cls");
+
+		cout << "===================================================== \n";
+		cout << " \t\t\t\tADD STAFF MEMBER \n ";
+		cout << "===================================================== \n\n";
 
 		cout << "Please Enter ID:" << endl;
 		cin >> staff_id;
@@ -99,45 +106,6 @@ public:
 		f2.close();
 		system("cls");
 		cout << "Staff User Account Successfully Created" << endl;
-	}
-
-	void stafflogin()
-	{
-		system("cls");
-		int count;
-		string AdminUsername, AdminPassword, u, p;
-		system("cls");
-		cout << "please enter the following details" << endl;
-		cout << "USERNAME :";
-		cin >> AdminUsername;
-		cout << "PASSWORD :";
-		cin >> AdminPassword;
-
-		ifstream input("staffdatabase.txt");
-		while (input >> u >> p)
-		{
-			if (u == AdminUsername && p == AdminPassword)
-
-			{
-				count = 1;
-				system("cls");
-			}
-		}
-		input.close();
-		if (count == 1)
-		{
-			cout << "\nHello " << AdminUsername << "\nLOGIN SUCESS\nWe're glad that you're here.\nThanks for logging in\n";
-			cin.get();
-			cin.get();
-			staffdisplaymenu();
-		}
-		else
-		{
-			cout << "\nLOGIN ERROR\nPlease check your username and password\n";
-			system("pause");
-			staffmenu();
-		}
-		system("pause");
 	}
 
 };

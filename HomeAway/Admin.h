@@ -1,4 +1,6 @@
 // Administrator Class
+// Written by Mikhael McDowell (2111649)
+
 
 #ifndef __ADMIN_H__
 #define __ADMIN_H__
@@ -33,6 +35,8 @@ public:
 
 	// Other
 	bool loginAdmin() {
+		// Verifies the login information entered for Admins
+
 		cout << "Enter Admin Username: " << endl;
 		cin >> admin_user;
 		cout << "Enter Admin Password: " << endl;

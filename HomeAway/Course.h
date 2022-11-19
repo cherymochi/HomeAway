@@ -1,4 +1,6 @@
 // Course Class
+// Written by Nathalea Evans (2101707)
+
 
 #ifndef __COURSE_H__
 #define __COURSE_H__
@@ -73,8 +75,39 @@ public:
 	}
 
 	// Other
-	void addCourse(string code, string name, string cred, string desc, string prereq) {
+	void addCourse() {
 		// Creates a new course to be added to the system
+
+		system("cls");
+
+		cout << "===================================================== \n";
+		cout << " \t\t\t\tADD A COURSE \n ";
+		cout << "===================================================== \n\n";
+
+		cout << "Please Course Code: ";
+		cin >> c_code;
+		cout << "Please Course Name: ";
+		cin >> c_name;
+		cout << "Please Enter Couse Credits: ";
+		cin >> credits;
+		cout << "Please Enter Course Description:";
+		cin >> description;
+		cout << "Please Enter Course Prerequisites: ";
+		cin >> prerequisites;
+
+
+		ofstream f1("Courses.txt", ios::app);
+		f1 << c_code << c_name << "\t" << credits << "\t" << description << "\t" << prerequisites << "\t" << endl;
+		f1.close();
+		system("cls");
+		cout << "Course Successfully Added" << endl;
+	}
+
+	void generateFeeBreakdown(){
+		// Calculates the fee for each course using the credits.
+
+		float cost = 10000.00;
+
 	}
 };
 
